@@ -1,0 +1,25 @@
+.container {
+	padding: 100px;
+}
+.title {
+	padding-bottom: 0.3em;
+    font-size: 1.75em;
+    font-weight: bold;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+.box {
+    border: 1px solid #E9E9E9;
+    padding: 42px 20px 50px;
+}
+.box:target {
+	border: 1px solid rgba(45,183,245,0.7);
+    box-shadow: 0 0 4px rgba(45,183,245,0.5);
+}
+.code-interface {
+    font-size: 14px;
+    margin: .5em 0;
+    padding-right: 25px;
+    width: 100%;
+    word-break: break-word;
+}
