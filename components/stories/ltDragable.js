@@ -1,6 +1,6 @@
 import React from 'react';
-import DragableTextArea from '../DragableTextArea';
-import DragableTextImage from '../DragableImage';
+import DragableTextArea from '../DragableTextArea/index';
+import DragableTextImage from '../DragableImage/index';
 import { storiesOf, action } from '@kadira/storybook';
 
 storiesOf('ltDragable', module)
