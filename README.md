@@ -2,8 +2,7 @@
 
   framework for developing our components isolating from our app.
 ## Introduction
-for one thing, you can develope your components here by collaborating your workmates.
-for another, any component you make can be published as a independent unit . when you have deved one components, you can delpoy it to npm just by run npm publish.
+Why to build this? For one thing, you can develope your components here by collaborating your workmates. Anyone can share his or her code.For another, any component you maked can be published as a independent unit . when you have deved one component, you can delpoy it to npm just by running npm publish shell.
 
 ### Usage
 
