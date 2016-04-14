@@ -1,6 +1,6 @@
 {
   "name": "ltcrm-components",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "ltcrm-components libarary",
   "main": "./lib/stories/exports.js",
   "scripts": {
@@ -16,6 +16,7 @@
     "babel-polyfill": "^6.3.14",
     "babel-preset-stage-2": "^6.5.0",
     "classnames": "^2.1.2",
+    "ramda": "^0.21.0",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
     "react-redux": "^4.2.1",
