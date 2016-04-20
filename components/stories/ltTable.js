@@ -1,7 +1,5 @@
 import React from 'react';
 import {Table, Icon, Checkbox } from 'antd';
-import DragableTextArea from '../DragableTextArea/index';
-import DragableTextImage from '../DragableImage/index';
 import EditableTable from '../EditableTable/index';
 import ChangeStyleTable from '../ChangeStyleTable/index';
 import { storiesOf, action } from '@kadira/storybook';

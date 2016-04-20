@@ -11,6 +11,7 @@
 .box {
     border: 1px solid #E9E9E9;
     padding: 42px 20px 50px;
+    margin: 10px;
 }
 .box:target {
 	border: 1px solid rgba(45,183,245,0.7);
@@ -22,4 +23,18 @@
     padding-right: 25px;
     width: 100%;
     word-break: break-word;
+}
+.component {
+    margin: 10px;
+}
+.collapse {
+    font-size: 30px;
+    position: absolute;
+    right:10px;
+    bottom: 10px;
+}
+.codeList {
+    position: absolute;
+    width: 75%;
+    height: 50px;
 }
