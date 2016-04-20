@@ -1,40 +1,47 @@
-.container {
+body {
+    font-family: '微软雅黑';
+}
+.lt-com-container {
 	padding: 100px;
 }
-.title {
+.lt-com-title {
 	padding-bottom: 0.3em;
     font-size: 1.75em;
     font-weight: bold;
     line-height: 1.225;
     border-bottom: 1px solid #eee;
 }
-.box {
+.lt-com-box {
     border: 1px solid #E9E9E9;
     padding: 42px 20px 50px;
     margin: 10px;
 }
-.box:target {
+.lt-com-box:target {
 	border: 1px solid rgba(45,183,245,0.7);
     box-shadow: 0 0 4px rgba(45,183,245,0.5);
 }
-.info {
+.lt-com-info {
     font-size: 14px;
     margin: .5em 0;
     padding-right: 25px;
     width: 100%;
     word-break: break-word;
 }
-.component {
+.lt-com-component {
     margin: 10px;
+    padding: 10px;
+    font-size: 13px;
 }
-.collapse {
+.lt-com-collapse {
     font-size: 30px;
     position: absolute;
     right:10px;
     bottom: 10px;
 }
-.codeList {
+.lt-com-codeList {
     position: absolute;
     width: 75%;
-    height: 50px;
+}
+.codeLab {
+    padding: 10px
 }

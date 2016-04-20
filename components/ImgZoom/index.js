@@ -43,6 +43,7 @@ const ImgZoom = React.createClass({
 	},
   // sort the images, default by last 3 Click Time desc.
   sort(title) { 
+  	console.log(title);
   	let temp = [];
   	let data = this.props.data;
 		for(let i= 0; i< data.length; i++) {
@@ -56,16 +57,17 @@ const ImgZoom = React.createClass({
 		this.setCookies();
   },
   render() {
+  	const data = this.getCookies() || this.props.data;
     return (
     	<div>
 				<Row>
 					<Col span="10" push="7">
-						<a href={this.props.data[0].link} onClick={this.sort.bind(this, this.props.data[0].title)}><image src={this.props.data[0].image} style={{margin: '10px auto 10px auto'}}/></a>
+						<a href={data[0].link} onClick={this.sort.bind(this, data[0].title)}><image src={data[0].image} style={{margin: '10px auto 10px auto'}}/></a>
 					</Col>
 				</Row>
 				<Row style={{margin: '20px auto 20px auto'}}>
 						{
-							R.clone(this.props.data).slice(1).map((dat) => {
+							R.clone(data).slice(1).map((dat) => {
 								return (
 							 		<Col span="2" push="5">
 						 				{this.props.titleVisible ? dat.title : ''}

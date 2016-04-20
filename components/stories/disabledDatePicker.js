@@ -47,7 +47,7 @@ const data = [{
   type: 'string',
   default: ''
 }];
-const AAA = React.createClass({
+const Sample = React.createClass({
   getInitialState() {
      return {
      }
@@ -65,26 +65,16 @@ const AAA = React.createClass({
   render() {
     return (
       <div>
-        <div className="component">
+        <div>
           开始时间：<DisabledDatePicker start value={this.state.startTime} end={this.state.endTime} onChange={this.onStartTimeChange}/>&nbsp;
           结束时间：<DisabledDatePicker end value={this.state.endTime} start={this.state.startTime} onChange={this.onEndTimeChange}/>
         </div>
-        <div className="box">
-          <span className="title">Code Lab</span>
-          <div id="codeLab"/>
-          <div className="component">
-            #TODO
-          </div>
-       </div>   
-       <div className="box">
-          <span className="title">Code List</span>
-          <div id="codeList" className="codeList" aria-hidden={true}>
-            {
-              <div className="component">
-                #TODO
-              </div>
-            }
-          </div>
+       <div className="lt-com-box">
+          <span className="lt-com-title">Code List</span>
+            <div className="component">
+              开始时间: {'<DisabledDatePicker start value={this.state.startTime} end={this.state.endTime} onChange={this.onStartTimeChange}/>'}<br/>
+              结束时间：{'<DisabledDatePicker end value={this.state.endTime} start={this.state.startTime} onChange={this.onEndTimeChange}/>'}
+            </div>
        </div>
       </div>
     )
@@ -93,12 +83,12 @@ const AAA = React.createClass({
   storiesOf('DisabledDatePicker', module)
   .add('DisabledDatePicker', () => {
     return (
-      <div className="container">
+      <div className="lt-com-container">
         <h2 style={{textAlign: 'center', marginBottom: 15, color: '#4078c0'}}>DisabledDatePicker</h2>
-        <AAA />
-        <div className="box">
-          <div className="title">API</div>
-          <div className="code-interface">
+        <Sample />
+        <div className="lt-com-box">
+          <div className="lt-com-title">API</div>
+          <div className="lt-com-code-interface">
             <Table columns={columns} dataSource={data} />
           </div>
         </div>

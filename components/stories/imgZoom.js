@@ -1,11 +1,12 @@
 import React from 'react';
 import { render } from 'react-dom'
-import {Table, Icon, Checkbox, Input } from 'antd';
+import {Table, Icon, Checkbox, Input, Row, Col, Form, Button, message, InputNumber } from 'antd';
 import ImgZoom from '../ImgZoom/index.js';
 import { storiesOf, action } from '@kadira/storybook';
 import R from 'ramda';
 import mixin from '../../utils/mixin.js';
 const CheckboxGroup = Checkbox.Group;
+const FormItem = Form.Item;
 
 const columns = [{
   title: '参数',
@@ -49,6 +50,7 @@ const data = [{
           title: '淘宝',
           thumbnail: 'taobao.ico',
           image: 'taobao.jpg',
+          link: 'http://www.taobao.com'
         }, {
           title: '京东',
           thumbnail: 'jd.ico',
@@ -63,47 +65,109 @@ const data = [{
           title: '折800',
           thumbnail: 'zhe800_ico.png',
           image: 'zhe800.png',
-          link: 'http://www.zhe800.com?tb=1'
+          link: 'http://zhe800.com'
         },{
           title: '微店',
           thumbnail: 'weidian_ico.png',
           image: 'weidian.png',
-          link: 'http://www.weidian.com?tb=1'
+          link: 'http://www.weidian.com'
         },{
           title: '蘑菇街',
           thumbnail: 'mogujie.ico',
           image: 'mogujie.png',
-          link: 'http://www.mogujie.com?tb=1'
+          link: 'http://www.mugujie.com'
         }];
-const hqq = React.createClass({
-   getInitialState() {
-      return {
-        data: '212121212'
-      }
-    },
-   render() {
-     return (
-      <div>test
-       <Input value={this.state.data} onchange={this.setValue.bind(this, 'data')}/>
-     </div>
-     );
-   }
+const Component = React.createClass({
+  getInitialState() {
+     return {
+     }
+  },
+  onStartTimeChange(value) {
+    this.setState({
+      startTime: value
+    });
+  },
+  onEndTimeChange(value) {
+    this.setState({
+      endTime: value
+    });
+  },
+  render() {
+    return (
+      <ImgZoom style={{margin: 200}} data = {this.props.data || defaultData} duration={this.props.duration} titleVisible={this.props.titleVisible} onClick={action('click the button')}/>
+    )
+  }
+});
+const Sample = React.createClass({
+  getInitialState() {
+     return {
+     }
+  },
+  onTitleVisibleChange(e) {
+    this.setState({
+      titleVisible: e.target.checked
+    });
+  },
+  onDataChange(e) {
+    this.setState({
+      data: e.target.value
+    });
+  },
+  onDurationBlur() {
+    const duration = this.state.duration || 15;
+    message.success('cookie will be expired after ' + duration + ' days', 3);
+  },
+  onDurationChange(e) {
+    this.setState({
+      duration: e.target.value
+    });
+  },
+  render() {
+    return (
+      <Form horizontal className="advanced-search-form">
+      <Component titleVisible={this.state.titleVisible} data={this.state.data} duration={this.state.duration}/>
+      <Row style={{margin: 10}}>
+       <Col span="12">
+          <FormItem
+            label="duration: "
+            labelCol={{ span: 6 }}
+            wrapperCol={{ span: 14 }}>
+            <Input max={1000000} placeholder="plz input duration of the cooike" value={this.state.duration} onBlur={this.onDurationBlur} onChange={this.onDurationChange} />
+          </FormItem>
+        </Col>
+        <Col span="8">
+          <FormItem
+            label="titleVisible: "
+            labelCol={{ span: 10 }}
+            wrapperCol={{ span: 14 }}>
+            <Checkbox value={this.state.titleVisible} onChange={this.onTitleVisibleChange}/>
+          </FormItem>
+        </Col>
+      </Row>
+</Form>
+    )
+  }
 });
 
   storiesOf('imgZoom', module)
   .add('imgZoom', () => {
     return (
-      <div className="container">
+      <div className="lt-com-container">
         <h2 style={{textAlign: 'center', marginBottom: 15, color: '#4078c0'}}>imgZoom</h2>
         默认取列表(data)第一个作为大图展示，组件会记住排序的结果（默认时间是15天）。<br/><br/>
-        <ImgZoom style={{margin: 200}} data = {defaultData} duration={30} titleVisible={true} onClick={action('click the button')}/>
-         <div className="box">
-            <span className="title">Code Lab</span>
-            <div id="codeLab"/><hqq/>
+         <div className="lt-com-box">
+            <span className="lt-com-title">Code Lab</span>
+            <div id="codeLab"/><Sample/>
          </div>
-        <div className="box">
-          <span className="title">API</span>
-          <div className="code-interface">
+         <div className="lt-com-box">
+          <span className="lt-com-title">Code List</span>
+            <div className="component">
+              {' <ImgZoom style={{margin: 200}} data = {this.props.data || defaultData} duration={this.props.duration} titleVisible={this.props.titleVisible}/>'}<br/>
+            </div>
+          </div>
+        <div className="lt-com-box">
+          <span className="lt-com-title">API</span>
+          <div className="lt-com-code-interface">
             <Table columns={columns} dataSource={data} />
           </div>
         </div>

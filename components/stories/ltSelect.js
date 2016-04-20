@@ -40,11 +40,11 @@ const data = [{
   storiesOf('select-awesome', module)
   .add('tableSelect', () => {
     return (
-      <div className="container">
+      <div className="lt-com-container">
         <h2 style={{textAlign: 'center', marginBottom: 15, color: '#4078c0'}}>tableSelect</h2>
-        <div className="box">
-          <div className="title">API</div>
-          <div className="code-interface">
+        <div className="lt-com-box">
+          <div className="lt-com-title">API</div>
+          <div className="lt-com-code-interface">
             <Table columns={columns} dataSource={data} />
           </div>
         </div>

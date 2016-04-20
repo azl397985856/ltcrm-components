@@ -77,12 +77,12 @@ const editableTableColumn = [{
   storiesOf('Table', module)
   .add('editableColumn', () => {
     return (
-      <div className="container">
+      <div className="lt-com-container">
        <h2 style={{textAlign: 'center', marginBottom: 15, color: '#4078c0'}}>EditableTable</h2>
         <EditableTable defaultValue={['ID', '名字', '地址', '说明']} dataSource={editableTableColumnData} columns={editableTableColumn}/>
-        <div className="box">
-          <div className="title">API</div>
-          <div className="code-interface">
+        <div className="lt-com-box">
+          <div className="lt-com-title">API</div>
+          <div className="lt-com-code-interface">
             <Table columns={columns} dataSource={data} />
           </div>
         </div>
@@ -90,12 +90,12 @@ const editableTableColumn = [{
     );
   }).add('editableStyle', () => {
     return (
-       <div className="container">
+       <div className="lt-com-container">
         <h2 style={{textAlign: 'center', marginBottom: 15, color: '#4078c0'}}>ChangeStyleTable</h2>
         <ChangeStyleTable/>
-        <div className="box">
-          <div className="title">API</div>
-          <div className="code-interface">
+        <div className="lt-com-box">
+          <div className="lt-com-title">API</div>
+          <div className="lt-com-code-interface">
             <Table columns={columns} dataSource={data} />
           </div>
         </div>

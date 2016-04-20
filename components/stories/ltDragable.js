@@ -42,27 +42,27 @@ const data = [{
 storiesOf('ltDragable', module)
   .add('dragableTextArea', () => {
     return (
-      <div className="container">
+      <div className="lt-com-container">
         <h2 style={{textAlign: 'center', marginBottom: 15, color: '#4078c0'}}>DragableTextArea</h2>
         <DragableTextArea drag={action('Add Todo')}/>
-        <div className="box">
-          <div className="title">API</div>
-          <div className="code-interface">
+        <div className="lt-com-box">
+          <div className="lt-com-title">API</div>
+          <div className="lt-com-code-interface">
             <Table columns={columns} dataSource={data} />
           </div>
-          <div className="title">注意：</div>
+          <div className="lt-com-title">注意：</div>
           <div className="info">So this part is just freakin' awesome. With React JS and the react-hot-loader you can change the class code of your component and see the instances update live in the DOM, without loosing their state! This is pretty much exactly how CSS updates behave, only that it is your components.</div>
         </div>
       </div>
     );
   }).add('dragableTextImage', () => {
     return (
-      <div className="container">
+      <div className="lt-com-container">
         <h2 style={{textAlign: 'center', marginBottom: 15, color: '#4078c0'}}>DragableTextImage</h2>
         <DragableTextImage drag={action('Add Todo')}/>
-         <div className="box">
-          <div className="title">API</div>
-          <div className="code-interface">
+         <div className="lt-com-box">
+          <div className="lt-com-title">API</div>
+          <div className="lt-com-code-interface">
             <Table columns={columns} dataSource={data} />
           </div>
         </div>
