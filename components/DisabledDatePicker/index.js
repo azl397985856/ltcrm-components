@@ -37,9 +37,8 @@ const DisabledDatePicker = React.createClass({
   	const onChange = this.props.onChange || noop;
   	const value = this.props.value || null;
   	const placeholder = this.props.placeholder || '';
-  	const style = this.props.style || {};
     return (
-    	<DatePicker disabledDate={this.disabledDate} onChange={onChange} value={value} placeholder={placeholder} style={style}/>
+    	<DatePicker disabledDate={this.disabledDate} onChange={onChange} value={value} placeholder={placeholder}/>
     )
   }
 });

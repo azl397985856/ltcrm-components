@@ -1,6 +1,6 @@
 import React from 'react';
 import {Table, DatePicker, Icon} from 'antd';
-import DisabledDatePicker from '../DisabledDatePicker/index.js';
+import DisabledDatePicker from '../components/DisabledDatePicker/index.js';
 import { storiesOf, action } from '@kadira/storybook';
 import R from 'ramda';
 

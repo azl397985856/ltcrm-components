@@ -1,10 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom'
 import {Table, Icon, Checkbox, Input, Row, Col, Form, Button, message, InputNumber } from 'antd';
-import ImgZoom from '../ImgZoom/index.js';
+import ImgZoom from '../components/ImgZoom/index.js';
 import { storiesOf, action } from '@kadira/storybook';
 import R from 'ramda';
-import mixin from '../../utils/mixin.js';
+import mixin from '../utils/mixin.js';
 const CheckboxGroup = Checkbox.Group;
 const FormItem = Form.Item;
 
