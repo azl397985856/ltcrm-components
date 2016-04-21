@@ -1,34 +1,20 @@
-var path = require('path')
-var webpack = require('webpack')
+const _htmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-  devtool: 'cheap-module-eval-source-map',
-  entry: [
-    'webpack-hot-middleware/client',
-    './entry'
-  ],
-  output: {
-    path: path.join(__dirname, 'dist'),
-    filename: 'bundle.js',
-    publicPath: '/static/'
-  },
-  plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin()
-  ],
-  module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        loaders: [ 'babel' ],
-        exclude: /node_modules/,
-        include: __dirname
-      },
-      {
-        test: /\.css?$/,
-        loaders: [ 'style', 'raw' ],
-        include: __dirname
-      }
-    ]
-  }
-}
+module.exports = function getWebpackConfig(webpackConfig) {
+	webpackConfig.module.loaders.forEach(function babelLoaderAntd(loader) {
+		if (loader.loader === 'babel') {
+			// https://github.com/ant-design/babel-plugin-antd
+			loader.query.plugins.push('antd');
+		}
+		return loader;
+	});
+    webpackConfig.module.entry = './components/stories/exports.js';
+
+	webpackConfig.plugins.push(new _htmlWebpackPlugin({
+		title: '灵通组件平台',
+		template: './index.html'
+	}));
+
+
+	return webpackConfig;
+};

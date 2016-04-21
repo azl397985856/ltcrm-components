@@ -58,8 +58,10 @@ const ImgZoom = React.createClass({
   },
   render() {
   	const data = this.getCookies() || this.props.data;
+  	const titleVisible = this.props.titleVisible || true;
+  	const style = this.props.style || {};
     return (
-    	<div>
+    	<div style={style}>
 				<Row>
 					<Col span="10" push="7">
 						<a href={data[0].link} onClick={this.sort.bind(this, data[0].title)}><image src={data[0].image} style={{margin: '10px auto 10px auto'}}/></a>
@@ -70,7 +72,7 @@ const ImgZoom = React.createClass({
 							R.clone(data).slice(1).map((dat) => {
 								return (
 							 		<Col span="2" push="5">
-						 				{this.props.titleVisible ? dat.title : ''}
+						 				{titleVisible ? dat.title : ''}
 						 				<a href={dat.link} onClick={this.sort.bind(this, dat.title)}>
 						 					<image src={dat.thumbnail} style={{marginBottom: '-4px', width:20, height: 20}}/>
 					 					</a>
