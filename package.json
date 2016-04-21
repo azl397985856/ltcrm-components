@@ -8,7 +8,9 @@
     "build": "rm -rf lib && babel components -d lib",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js",
     "test:watch": "npm test -- --watch",
-    "dev": "start-storybook -p 9001 -s ./assets"
+    "dev": "start-storybook -p 9001 -s ./assets",
+    "pub": "rm -rf lib && babel components -d lib && cp -r ./lib e:/npm/ltcrm-components/ && cp ./package.json e:/npm/ltcrm-components/
+    && cd e:/npm/ltcrm-components/ && npm publish"
   },
   "license": "MIT",
   "dependencies": {
