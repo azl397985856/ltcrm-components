@@ -161,7 +161,7 @@ const Sample = React.createClass({
          </div>
          <div className="lt-com-box">
           <span className="lt-com-title">Code List</span>
-            <div className="component">
+            <div className="lt-com-component">
               {' <ImgZoom style={{margin: 200}} data = {this.props.data || defaultData} duration={this.props.duration} titleVisible={this.props.titleVisible}/>'}<br/>
             </div>
           </div>

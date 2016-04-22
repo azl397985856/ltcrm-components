@@ -10,6 +10,7 @@ body {
     font-weight: bold;
     line-height: 1.225;
     border-bottom: 1px solid #eee;
+    margin: 10px;
 }
 .lt-com-box {
     border: 1px solid #E9E9E9;

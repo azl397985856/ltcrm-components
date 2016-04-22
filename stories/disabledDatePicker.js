@@ -71,7 +71,7 @@ const Sample = React.createClass({
         </div>
        <div className="lt-com-box">
           <span className="lt-com-title">Code List</span>
-            <div className="component">
+            <div className="lt-com-component">
               开始时间: {'<DisabledDatePicker start value={this.state.startTime} end={this.state.endTime} onChange={this.onStartTimeChange}/>'}<br/>
               结束时间：{'<DisabledDatePicker end value={this.state.endTime} start={this.state.startTime} onChange={this.onEndTimeChange}/>'}
             </div>
