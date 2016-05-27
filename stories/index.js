@@ -5,3 +5,5 @@ import './ltSelect.js';
 import './imgZoom.js';
 import './disabledDatePicker.js'
 import './checkBoxGroup';
+import './progress';
+import './ltWizard'

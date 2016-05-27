@@ -5,10 +5,10 @@ function noop() {
 
 }
 const DisabledDatePicker = React.createClass({
-  getInitialState() {
+	getInitialState() {
      return {
      }
-  },
+	},
 	disabledSendStartDate(startValue) {
 		if (!startValue || !this.props.end) {
 			return false;
@@ -32,14 +32,39 @@ const DisabledDatePicker = React.createClass({
 			return this.disabledSendEndDate(arg);
 		}
 	},
-  render() {
-  	const props = this.props;
-  	const onChange = this.props.onChange || noop;
-  	const value = this.props.value || null;
-  	const placeholder = this.props.placeholder || '';
-    return (
-    	<DatePicker disabledDate={this.disabledDate} onChange={onChange} value={value} placeholder={placeholder}/>
-    )
+	render() {
+	const props = this.props;
+	const onChange = this.props.onChange || noop;
+	const value = this.props.value;
+	const placeholder = this.props.placeholder || '';
+	const defaultValue = this.props.defaultValue;
+	const format = this.props.format || "yyyy-MM-dd";
+	const disabled = this.props.disabled || false;
+	const popupStyle = this.props.popupStyle || {};
+	const size = this.props.size;
+	const style = this.props.style || {};
+	const locale = this.props.locale || {};
+	const showTime = this.props.showTime || false;
+	const onOk = this.props.onOk || noop;
+	const getCalendarContainer = this.props.getCalendarContainer;
+	return (
+		<DatePicker
+			disabledDate={this.disabledDate}
+			onChange={onChange}
+			value={value}
+			placeholder={placeholder}
+			defaultValue={defaultValue}
+			format={format}
+			disabled={disabled}
+			style={style}
+			popupStyle={popupStyle}
+			size={size}
+			locale={locale}
+			showTime={showTime}
+			onOk={onOk}
+			getCalendarContainer={getCalendarContainer}
+			/>
+	)
   }
 });
 

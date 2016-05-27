@@ -36,7 +36,6 @@ const DragableImage = React.createClass({
 });
 
 DragableImage.propTypes = {
-  addTodo: PropTypes.func.isRequired
 }
 
 export default DragableImage;

@@ -46,3 +46,12 @@ body {
 .codeLab {
     padding: 10px
 }
+.hljs-built_in {
+    color: #0086b3;
+}
+.hljs-string, .hljs-tag .hljs-value, .hljs-phpdoc, .hljs-dartdoc, .tex .hljs-formula {
+    color: #d14;
+}
+.hljs-keyword {
+    color: rgb(255, 153, 0);
+}

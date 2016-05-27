@@ -27,7 +27,6 @@ const DragableTextArea = React.createClass({
 });
 
 DragableTextArea.propTypes = {
-  addTodo: PropTypes.func.isRequired
 }
 
 export default DragableTextArea;
