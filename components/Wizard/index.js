@@ -47,7 +47,37 @@ const cb = function() {
 
 function noop() {}
 
-
+const defaultData = [{
+          title: '淘宝',
+          thumbnail: 'taobao.ico',
+          image: 'taobao.jpg',
+          link: 'http://www.taobao.com'
+        }, {
+          title: '京东',
+          thumbnail: 'jd.ico',
+          image: 'jd.png',
+          link: 'http://www.jd.com'
+        }, {
+          title: '1号店o',
+          thumbnail: 'yhd.jpg',
+          image: 'yhd.png',
+          link: 'http://www.yhd.com'
+        },{
+          title: '折800',
+          thumbnail: 'zhe800_ico.png',
+          image: 'assets/zhe800.png',
+          link: 'http://zhe800.com'
+        },{
+          title: '微店',
+          thumbnail: 'assets/weidian_ico.png',
+          image: 'assets/weidian.png',
+          link: 'http://www.weidian.com'
+        },{
+          title: '蘑菇街',
+          thumbnail: 'mogujie.ico',
+          image: 'mogujie.png',
+          link: 'http://www.mugujie.com'
+        }];
 const Wizard = React.createClass({
   mixins: [TourGuideMixin(tour, cb)],
   getInitialState() {
@@ -96,7 +126,7 @@ const Wizard = React.createClass({
 							<Row style={{margin:20}}>
 								密码：<Input id="sencond"/>
 							</Row>
-							<ImgZoom className="img-zoom" percent={this.props.percent} noSuccess width='250' strokeColor="#E87975" strokeWidth="3" progressInfo={<span>test</span>}/>
+							<ImgZoom className="img-zoom" titleVisible={true} data={defaultData}/>
             </div>
     )
   }
