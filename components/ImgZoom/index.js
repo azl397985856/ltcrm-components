@@ -58,8 +58,10 @@ const ImgZoom = React.createClass({
   },
   render() {
   	const data = this.getCookies() || this.props.data;
+  	const className = this.props.className;
+  	const style = this.props.style;
     return (
-    	<div>
+    	<div className={className} style={style}>
 				<Row>
 					<Col span="10" push="7">
 						<a href={data[0].link} onClick={this.sort.bind(this, data[0].title)}><image src={data[0].image} style={{margin: '10px auto 10px auto'}}/></a>
