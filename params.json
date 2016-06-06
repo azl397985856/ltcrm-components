@@ -1,6 +1,0 @@
-{
-  "name": "Ltcrm-components",
-  "tagline": "framework for developing our components isolating from our app.",
-  "body": "## ltcrm-components\r\n\r\n  framework for developing our components isolating from our app.\r\n## Introduction\r\nWhy to build this? For one thing, you can develope your components here by collaborating your workmates. Anyone can share his or her code.For another, any component you maked can be published as a independent unit . when you have deved one component, you can delpoy it to npm just by running npm publish shell.\r\n\r\n### Usage\r\n\r\n```\r\nnpm install\r\nnpm run dev\r\n```\r\n\r\nThen open `http://localhost:9001` on your browser. \r\n\r\nand what you see is just like that:\r\n\r\n![image](https://github.com/azl397985856/ltcrm-components/raw/master/clip.png)\r\n\r\n### Lisence\r\nMIT\r\n",
-  "note": "Don't delete this file! It's used internally to help with page regeneration."
-}
