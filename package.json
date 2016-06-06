@@ -1,16 +1,17 @@
 {
   "name": "ltcrm-components",
-  "version": "0.3.19",
+  "version": "0.3.28",
   "description": "ltcrm-components libarary",
   "main": "./lib/index",
   "scripts": {
     "start": "node server.js",
+    "prepublish": "scripts/prepublish",
     "build-static": "build-storybook -o ltcrm-components-static",
     "build": "rm -rf lib && babel components -d lib",
     "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js",
     "test:watch": "npm test -- --watch",
     "dev": "start-storybook -p 9001 -s ./assets",
-    "pub": "rm -rf lib && babel components -d lib && cp -r ./lib e:/npm/ltcrm-components/ && cp ./package.json e:/npm/ltcrm-components/ && cd e:/npm/ltcrm-components/ && npm publish"
+    "pub": "prepublish && scripts/publish"
   },
   "license": "MIT",
   "dependencies": {
@@ -22,7 +23,8 @@
     "ramda": "^0.21.0",
     "react": "0.14.8",
     "react-dom": "^0.14.7",
-    "react-markdown": "^2.2.0"
+    "react-markdown": "^2.2.0",
+    "react-guest-tutorial": "0.0.6"
   },
   "repository": {
     "type": "git",
