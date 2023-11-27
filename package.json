@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "antd": "^0.12.13",
+    "antd": "^4.0.0",
     "babel-polyfill": "^6.3.14",
     "babel-preset-stage-2": "^6.5.0",
     "classnames": "^2.1.2",
